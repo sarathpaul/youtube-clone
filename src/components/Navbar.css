@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    height: 56px;
+    color: white;
+}
+.yt-logo {
+    width: 28.57px;
+    height: 20px;
+}
+.navbar .navstart{
+    display: flex;
+}
+ .navmid button {
+    background-color: black;
+}
+.navbar .navstart img{
+    width: 24px;
+    height: 24px;
+}
+.navbar .navmid{
+    display: flex;
+}
+.navbar .navmid .form-control {
+    min-width: 500px;
+}

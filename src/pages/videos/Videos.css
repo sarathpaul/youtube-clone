@@ -1,0 +1,6 @@
+.videos-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
