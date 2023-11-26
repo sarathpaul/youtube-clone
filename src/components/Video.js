@@ -7,7 +7,7 @@ const Video = (props) => {
                 <source src="mov_bbb.mp4" type="video/mp4" />
                 <source src="mov_bbb.ogg" type="video/ogg" />
             </video>
-            <h5>{props.title}</h5>
+            <h5 className='text-white'>{props.title}</h5>
         </div>
     )
 }

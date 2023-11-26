@@ -1,8 +1,10 @@
 import React from 'react';
 import Video from '../../components/Video';
 import NavBar from "../../components/NavBar";
+import Sidebar from "../..//components/Sidebar";
 import "./Videos.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 
 const data = [
   { id: "1", title: "This is sample title 1" },
@@ -16,19 +18,25 @@ const data = [
 
 const Videos = () => {
   const navigate = useNavigate();
+  const [expand, setExpand] = useState(false);
+    const handleSideBar = () => {
+        setExpand(!expand)
+    }
+
   const handleShowDetails = (id) => {
     navigate(`Videos/${id}`);
   }
   return (
-    <div>
-      <NavBar />
+    <div className='bg-black'>
+      <NavBar handleSideBar={handleSideBar} />
+      <Sidebar expand={expand} handleSideBar={handleSideBar} />
       <div className='videos-container'>
         {data.map((x => (
-          <div onClick={() => {
+          <button key={x.id} onClick={() => {
             handleShowDetails(x.id);
           }}>
             <Video title={x.title} />
-          </div>
+          </button>
         )))}
       </div>
     </div>

@@ -12,7 +12,6 @@ function Login() {
         event.preventDefault();
         // "Sarath_Paul"
         // "Test_123ai07"
-        let data = null;
         try {
             let response = await axios({
                 url: `https://react-test.aventusinformatics.com/api/auth/login`,
@@ -35,7 +34,7 @@ function Login() {
             <Form>
                 <h1>Login</h1>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>Username</Form.Label>
                     <Form.Control
                      type="text" 
                      placeholder="Enter Username"
